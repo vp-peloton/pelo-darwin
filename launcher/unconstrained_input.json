@@ -1,0 +1,23 @@
+{
+    "generations": 50,
+    "prob_crossover": 0.9,
+    "prob_mutation": 0.1,
+    "initial":{
+        "operator": "random_with_exact_selection",
+        "count": 10,
+        "size": "100, 35"
+        },
+    "parents": {
+        "operator": "rank"
+        },
+    "crossover": {
+        "operator": "single_point"
+        },
+    "mutation": {
+        "operator": "balance"
+        },
+    "fitness": {
+        "operator": "linear",
+        "cost_path": "launcher/toy_cost.txt"
+        }
+}

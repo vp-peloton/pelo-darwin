@@ -1,0 +1,32 @@
+{
+    "generations": 50,
+    "prob_crossover": 0.5,
+    "prob_mutation": 0.3,
+    "initial":{
+        "operator": "random_with_exact_selection",
+        "count": 2,
+        "size": "500, 15"
+        },
+    "parents": {
+        "operator": "constrained_tournament"
+        },
+    "crossover": {
+        "operator": "single_point"
+        },
+    "mutation": {
+        "operator": "balance"
+        },
+    "fitness": {
+        "operator": "linear",
+        "cost_path": "launcher/toy_cost2.txt"
+        },
+    "objective": {
+        "operator": "linear",
+        "cost_path":"launcher/toy_cost2.txt"
+        },
+    "constraint": {
+        "operator": "linear_inequality",
+        "A": "launcher/toy_A.txt", 
+        "b": 0.5
+        }
+}
